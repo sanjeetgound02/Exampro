@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard - ExamPro</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ================================
+         SIDEBAR
+    ================================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+
+            <div>
+                <h2>ExamPro</h2>
+                <span>Online Examination</span>
+            </div>
+
+        </div>
+
+
+       <nav class="sidebar-menu">
+
+    <a href="#" class="menu-item active"
+       onclick="document.querySelector('.sidebar').classList.remove('show')">
+        <i class="fa-solid fa-house"></i>
+        <span>Dashboard</span>
+    </a>
+
+                <a href="#myExams"
+                class="menu-item"
+                onclick="document.querySelector('.sidebar').classList.remove('show')">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>My Exams</span>
+
+                </a>
+
+<a href="results.html"
+   class="menu-item"
+   onclick="document.querySelector('.sidebar').classList.remove('show')">
+
+    <i class="fa-solid fa-chart-column"></i>
+
+    <span>Results</span>
+
+</a>
+
+<a href="profile.html"
+   class="menu-item"
+   onclick="document.querySelector('.sidebar').classList.remove('show')">
+
+    <i class="fa-solid fa-user"></i>
+    <span>My Profile</span>
+
+</a>
+
+</nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+                type="button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="page-title">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Manage your examinations and results
+                </p>
+
+            </div>
+
+
+            <div class="student-profile">
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>2</span>
+
+                </div>
+
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong id="studentName">
+                        Student
+                    </strong>
+
+                    <small>
+                        Student
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================
+             WELCOME
+        ================================= -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <span class="welcome-small">
+                    Welcome back 👋
+                </span>
+
+                <h2 id="welcomeName">
+                    Hello, Student!
+                </h2>
+
+                <p>
+                    Ready to test your knowledge?
+                    Choose an exam below and begin.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-icon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             STATISTICS
+        ================================= -->
+
+        <section class="stats-grid">
+
+            <!-- Total Exams -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total Exams</span>
+
+                    <h2 id="totalExams">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Completed</span>
+
+                    <h2 id="completedExams">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pending -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Pending</span>
+
+                    <h2 id="pendingExams">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Average Score -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Average Score</span>
+
+                    <h2 id="averageScore">
+                        0%
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             AVAILABLE EXAMS
+        ================================= -->
+
+        <section class="section-header" id="myExams">
+
+            <div>
+
+                <h2>Available Exams</h2>
+
+                <p>
+                    Select an examination to start
+                </p>
+
+            </div>
+
+            <a href="results.html" class="view-all">
+                View All
+            </a>
+
+        </section>
+
+
+        <section
+            class="exam-grid"
+            id="examContainer"
+        >
+
+            <!-- Exams generated using JavaScript -->
+
+        </section>
+
+
+        <!-- ================================
+             RECENT RESULTS
+        ================================= -->
+
+        <section class="section-header result-heading">
+
+            <div>
+
+                <h2>Recent Results</h2>
+
+                <p>
+                    Your latest examination performance
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="result-table-container">
+
+            <table>
+
+                <thead>
+
+                        <tr>
+                            <th>Exam Name</th>
+                            <th>Date</th>
+                            <th>Questions</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                </thead>
+
+
+                <tbody id="resultTable">
+
+                    <!-- Results generated by JS -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="css/js/dashboard.js"></script>
+
+</body>
+
+</html>

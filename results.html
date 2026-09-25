@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Results - ExamPro</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Results CSS -->
+    <link
+        rel="stylesheet"
+        href="css/results.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         SIDEBAR OVERLAY
+    ========================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+    </div>
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+
+            <div>
+                <h2>ExamPro</h2>
+                <span>Online Examination</span>
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="sidebar-menu">
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="dashboard.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <!-- My Exams -->
+
+            <a
+                href="dashboard.html#myExams"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>My Exams</span>
+            </a>
+
+
+            <!-- Results -->
+
+            <a
+                href="results.html"
+                class="sidebar-link active"
+            >
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Results</span>
+            </a>
+
+
+            <!-- My Profile -->
+
+            <a
+                href="profile.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+
+        </nav>
+
+
+        <!-- LOGOUT -->
+
+        <div class="logout-area">
+
+            <a
+                href="index.html"
+                id="logoutLink"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================================
+             PAGE HEADER
+        ========================================== -->
+
+        <header class="page-header">
+
+
+            <div class="header-left">
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="mobile-menu"
+                    id="mobileMenu"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <h1>
+                        Results
+                    </h1>
+
+                    <p>
+                        View your examination performance and previous results.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- STUDENT INFO -->
+
+            <div class="student-info">
+
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        2
+                    </span>
+
+                </div>
+
+
+                <div class="profile-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="student-details">
+
+                    <strong id="headerStudentName">
+                        Student
+                    </strong>
+
+                    <small>
+                        Student
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================================
+             SUMMARY CARDS
+        ========================================== -->
+
+        <section class="summary-cards">
+
+
+            <!-- Total Exams -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon blue">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Exams
+                    </span>
+
+                    <h2 id="totalExams">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Passed -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Passed
+                    </span>
+
+                    <h2 id="passedExams">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Average -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon orange">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Average Score
+                    </span>
+
+                    <h2 id="averageScore">
+                        0%
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Best -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon purple">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Best Score
+                    </span>
+
+                    <h2 id="bestScore">
+                        0%
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================================
+             RESULTS SECTION
+        ========================================== -->
+
+        <section class="results-section">
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="result-header-actions">
+
+
+                <button
+                    class="clear-history-btn"
+                    id="clearHistoryBtn"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear History
+
+                </button>
+
+
+                <select
+                    class="filter-select"
+                    id="filterSelect"
+                >
+
+                    <option value="all">
+                        All Results
+                    </option>
+
+                    <option value="passed">
+                        Passed
+                    </option>
+
+                    <option value="failed">
+                        Failed
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-container">
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Exam Name
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Correct
+                            </th>
+
+                            <th>
+                                Wrong
+                            </th>
+
+                            <th>
+                                Skipped
+                            </th>
+
+                            <th>
+                                Score
+                            </th>
+
+                            <th>
+                                Percentage
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="resultsTable">
+
+                        <!-- Results loaded by JavaScript -->
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================================
+             EMPTY RESULTS
+        ========================================== -->
+
+        <div
+            id="emptyResults"
+            class="empty-results"
+        >
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            <h2>
+                No Results Found
+            </h2>
+
+            <p>
+                Complete an examination to see your results here.
+            </p>
+
+            <a href="dashboard.html">
+                Go to Dashboard
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Results JavaScript -->
+
+    <script src="css/js/results.js"></script>
+
+</body>
+
+</html>

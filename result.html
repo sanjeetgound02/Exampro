@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Exam Result - ExamPro</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Result CSS -->
+    <link
+        rel="stylesheet"
+        href="css/result.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         RESULT PAGE
+    ========================================== -->
+
+    <div class="result-page">
+
+        <div class="result-card">
+
+
+            <!-- =========================================
+                 SUCCESS ICON
+            ========================================== -->
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <!-- =========================================
+                 TITLE
+            ========================================== -->
+
+            <h1>
+                Exam Completed!
+            </h1>
+
+            <p class="subtitle">
+                Your examination has been submitted successfully.
+            </p>
+
+
+            <!-- =========================================
+                 EXAM INFORMATION
+            ========================================== -->
+
+            <div class="exam-info">
+
+                <div class="info-item">
+
+                    <span>
+                        Student Name
+                    </span>
+
+                    <strong id="studentName">
+                        Shivangi
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Exam Name
+                    </span>
+
+                    <strong id="examName">
+                        Computer Fundamentals
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 SCORE SECTION
+            ========================================== -->
+
+            <div class="score-section">
+
+
+                <!-- SCORE CIRCLE -->
+
+                <div class="score-circle">
+
+                    <strong id="percentage">
+                        80%
+                    </strong>
+
+                    <span>
+                        Score
+                    </span>
+
+                </div>
+
+
+                <!-- SCORE DETAILS -->
+
+                <div class="score-details">
+
+
+                    <!-- TOTAL QUESTIONS -->
+
+                    <div class="score-box">
+
+                        <span>
+                            Total Questions
+                        </span>
+
+                        <strong id="totalQuestions">
+                            10
+                        </strong>
+
+                    </div>
+
+
+                    <!-- CORRECT -->
+
+                    <div class="score-box correct">
+
+                        <span>
+                            Correct
+                        </span>
+
+                        <strong id="correctAnswers">
+                            8
+                        </strong>
+
+                    </div>
+
+
+                    <!-- WRONG -->
+
+                    <div class="score-box wrong">
+
+                        <span>
+                            Wrong
+                        </span>
+
+                        <strong id="wrongAnswers">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- SKIPPED -->
+
+                    <div class="score-box skipped">
+
+                        <span>
+                            Skipped
+                        </span>
+
+                        <strong id="skippedAnswers">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- MARKS -->
+
+                    <div class="score-box">
+
+                        <span>
+                            Marks
+                        </span>
+
+                        <strong id="score">
+                            0/10
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 PERFORMANCE SUMMARY
+            ========================================== -->
+
+            <div class="performance">
+
+                <h2>
+                    Performance Summary
+                </h2>
+
+
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar">
+                    </div>
+
+                </div>
+
+
+                <p id="performanceText">
+                    Good performance! Keep practicing to improve your score.
+                </p>
+
+            </div>
+
+
+            <!-- =========================================
+                 RESULT ACTIONS
+            ========================================== -->
+
+            <div class="result-actions">
+
+
+                <!-- BACK TO DASHBOARD -->
+
+                <a
+                    href="dashboard.html"
+                    class="btn primary"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    Back to Dashboard
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="profile.html"
+                    class="btn secondary"
+                >
+                    <i class="fa-solid fa-user"></i>
+                    My Profile
+                </a>
+
+
+                <!-- RETAKE EXAM -->
+
+                <a
+                    href="exam.html"
+                    class="btn secondary"
+                    id="retakeBtn"
+                >
+                    <i class="fa-solid fa-rotate-right"></i>
+                    Retake Exam
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         RESULT JAVASCRIPT
+    ========================================== -->
+
+    <script src="css/js/result.js?v=3"></script>
+
+</body>
+
+</html>
