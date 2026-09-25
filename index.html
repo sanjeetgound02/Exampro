@@ -2,141 +2,467 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Online Examination System</title>
 
+
     <!-- Google Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
+
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- Registration page extra styling -->
+
+    <style>
+
+        .register-form {
+            display: none;
+        }
+
+        .auth-switch {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .auth-switch button {
+            border: none;
+            background: none;
+            color: #2563eb;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .auth-switch button:hover {
+            text-decoration: underline;
+        }
+
+        .register-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .register-title h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .register-title p {
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .register-btn {
+            width: 100%;
+            border: none;
+            padding: 13px;
+            border-radius: 10px;
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #4f46e5
+            );
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .back-login {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .back-login button {
+            border: none;
+            background: none;
+            color: #2563eb;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .register-message {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 12px;
+            min-height: 18px;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
     <!-- Background Animation -->
+
     <div class="background">
+
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
+
     </div>
 
+
     <!-- Main Container -->
+
     <div class="container">
+
 
         <div class="login-card">
 
-            <!-- Logo -->
-            <div class="logo">
-                <div class="logo-icon">
-                    📝
-                </div>
 
-                <h1>Exam<span>Pro</span></h1>
+            <!-- =====================================
+                 LOGIN SECTION
+            ====================================== -->
 
-                <p>Online Examination System</p>
-            </div>
+            <div id="loginSection">
 
-            <!-- Login Form -->
-            <form id="loginForm">
 
-                <div class="form-group">
+                <!-- Logo -->
 
-                    <label for="email">
-                        Email Address
-                    </label>
+                <div class="logo">
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
+                    <div class="logo-icon">
+                        📝
+                    </div>
+
+                    <h1>
+                        Exam<span>Pro</span>
+                    </h1>
+
+                    <p>
+                        Online Examination System
+                    </p>
 
                 </div>
 
-                <div class="form-group">
 
-                    <label for="password">
-                        Password
-                    </label>
+                <!-- Login Form -->
 
-                    <div class="password-box">
+                <form id="loginForm">
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
 
                         <input
-                            type="password"
-                            id="password"
-                            placeholder="Enter your password"
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
                             required
                         >
 
-                        <button
-                            type="button"
-                            id="togglePassword">
-                            👁
-                        </button>
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
 
                     </div>
 
+
+                    <!-- Options -->
+
+                    <div class="options">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            Remember me
+
+                        </label>
+
+                        <a href="#">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                        id="loginBtn"
+                    >
+                        Login
+                    </button>
+
+
+                    <p id="message"></p>
+
+
+                </form>
+
+
+                <!-- Create Account -->
+
+                <div class="auth-switch">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="showRegister"
+                    >
+                        Create Account
+                    </button>
+
                 </div>
 
-                <div class="options">
 
-                    <label>
-                        <input type="checkbox" id="remember">
-                        Remember me
-                    </label>
+                <!-- Demo Login -->
 
-                    <a href="#">
-                        Forgot Password?
-                    </a>
+                <div class="demo-login">
+
+                    <h3>
+                        Demo Login
+                    </h3>
+
+                    <p>
+                        Email:
+                        <strong>
+                            admin@exam.com
+                        </strong>
+                    </p>
+
+                    <p>
+                        Password:
+                        <strong>
+                            admin123
+                        </strong>
+                    </p>
 
                 </div>
 
-                <button
-                    type="submit"
-                    class="login-btn"
-                    id="loginBtn">
-
-                    Login
-
-                </button>
-
-                <p id="message"></p>
-
-            </form>
-
-            <!-- Demo Login -->
-            <div class="demo-login">
-
-                <h3>Demo Login</h3>
-
-                <p>
-                    Email:
-                    <strong>admin@exam.com</strong>
-                </p>
-
-                <p>
-                    Password:
-                    <strong>admin123</strong>
-                </p>
 
             </div>
 
+
+            <!-- =====================================
+                 REGISTER SECTION
+            ====================================== -->
+
+            <div
+                id="registerSection"
+                class="register-form"
+            >
+
+
+                <div class="register-title">
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p>
+                        Register to start your examination
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="registerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required
+                            minlength="6"
+                        >
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                            minlength="6"
+                        >
+
+                    </div>
+
+
+                    <!-- Register Button -->
+
+                    <button
+                        type="submit"
+                        class="register-btn"
+                    >
+                        Create Account
+                    </button>
+
+
+                    <p
+                        id="registerMessage"
+                        class="register-message"
+                    ></p>
+
+
+                </form>
+
+
+                <!-- Back to Login -->
+
+                <div class="back-login">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="backToLogin"
+                    >
+                        Login
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
         </div>
+
 
     </div>
 
+
     <!-- JavaScript -->
+
     <script src="css/js/auth.js"></script>
 
 </body>
